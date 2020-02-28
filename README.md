@@ -1,5 +1,5 @@
 
-## Gatsby Project
+## Customer Data Display using react(gatsby)
 
 1.  **Create a Gatsby site.**
 Project is being Developed using gatsby. It's free open source framwork based on React JS.
@@ -8,8 +8,8 @@ Project is being Developed using gatsby. It's free open source framwork based on
 Clone the repo and run npm install to install all dependencies
 
 ```bash
-$ git clone https://github.com/aneraghu/gatsbyProject.git
-$ cd gatsbyProject
+$ git clone https://github.com/aneraghu/fetchCustomerData.git
+$ cd fetchCustomerData
 $ npm install -g gatsby-cli
 $ npm install
 $ gatsby develop
