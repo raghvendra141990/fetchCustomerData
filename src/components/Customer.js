@@ -9,11 +9,6 @@ class Customer extends React.Component {
         addResult: []
       }
     }
-handleSubmit = values => {
-  console.log(values);
-  // process submission (e.g., send to API)...
- document.getElementsByClassName('result')[0].innerHTML=JSON.stringify(values)
-};
 componentDidMount(){
   axios.get(`/Users.json`)
        .then(res => {
@@ -40,7 +35,12 @@ this.setState({addResult:Address})
 }
 render() {
   var items= this.state.users.map(e=>{
-          return <div className="customer" key={e.EmpId} onClick={this.handleClick.bind(this,e.EmpId)}><span><b>Employee Id:</b>  {e.EmpId}</span><span><b>Name:</b>  {e.Name}</span><span><b>Age:</b>  {e.Age}</span><span><b>Gender:</b>  {e.Sex}</span></div>
+          return <div className="customer" key={e.EmpId} onClick={this.handleClick.bind(this,e.EmpId)}>
+                     <span><b>Employee Id:</b>  {e.EmpId}</span>
+                     <span><b>Name:</b>{e.Name}</span>
+                     <span><b>Age:</b> {e.Age}</span>
+                     <span><b>Gender:</b> {e.Sex}</span>
+                  </div>
         })
   return  <React.Fragment>
             <div className="result">
@@ -49,7 +49,7 @@ render() {
             <div className="add-result">
               {this.state.addResult}
             </div>
-       </React.Fragment>
+        </React.Fragment>
 };
 }
 export default Customer;
